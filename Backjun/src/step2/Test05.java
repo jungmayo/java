@@ -12,12 +12,12 @@ public class Test05 {
 		if(M<45) {
 			H--;
 			M = 60-(45 - M);
-				if(H == 0) {
+				if(H < 0) {
 					H = 23;
 				}
 				System.out.println(H + " " + M);
 			}else if (M > 45) {
-				System.out.println(H + " " + (45 - M));
+				System.out.println(H + " " + (M - 45));
 		}
 	}
 }
