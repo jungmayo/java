@@ -9,8 +9,16 @@ import java.util.Arrays;
 public class Test04 {
 
 	public static void main(String[] args) {
-		char str[] = {'I',' ','L','O','V','E',' ','Y','O','U'};
-		int row, col;
+		char str[] = {4, 2, 1, 5, 3};
+		for(int i = 0; i<4; i++) {
+			for (int j = i+1; j<5; j++) {
+				if(arr[i]> arr[j]) {
+					int temp = arr[j];
+					arr [j] = arr[i];
+					arr[i]= temp;
+				}
+			}
+		}
 		
 		for (row = 1; row < 10; row++) {
 			for (col = 0; col <= row; col++) {

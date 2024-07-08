@@ -11,7 +11,7 @@ public class Test03 {
 		
 		//현재 배열 출력
 		for (int i=0; i<10; i++) {
-			System.out.println(arr[i] + ", ");
+			System.out.print(arr[i] + ", ");
 		}
 		System.out.println("\n");
 		
@@ -23,8 +23,8 @@ public class Test03 {
 		}
 		
 		// 역순으로 정렬된 배열 출력
-		for (      ) {
-			System.out.println(n + ", ");
+		for (int n : arr ) {
+			System.out.print(n + ", ");
 		}
 	}
 }
