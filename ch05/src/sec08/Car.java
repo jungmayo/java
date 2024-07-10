@@ -14,7 +14,7 @@ public class Car {
 	Car(){}
 	
 	Car(String model){
-		this.model = model;
+		this.model = model; // 필드 초기화
 	}
 	Car(String model, String color){
 		this.model = model;
@@ -50,3 +50,6 @@ public class Car {
 		System.out.println();
 	}
 }
+
+
+

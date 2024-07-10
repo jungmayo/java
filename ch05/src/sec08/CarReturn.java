@@ -1,7 +1,7 @@
 package sec08;
 
 
-
+//240페이지
 public class CarReturn {
 
 	// 필드 선언
@@ -19,13 +19,13 @@ public class CarReturn {
 		return true;
 	}
 	void run() {
-		while (true) {
+		while (true) { //if가 참이면 계속 실행
 			if ( gas > 0 ) {
 				System.out.println("달립니다.(gas잔량 :" + gas +")");
 				gas -=1;
 			}else {
 				System.out.println("멈춥니다.(gas잔량 :" + gas + ")");
-				return;
+				break;
 			}
 		}
 	}
