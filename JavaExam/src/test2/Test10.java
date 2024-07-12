@@ -7,16 +7,16 @@ package test2;
 public class Test10 {
 
 	public static void main(String[] args) {
-		char str[] = {'I',' ','L','O','V','E',' ','Y','O','U'};
-		int row, col;
+		for(int i=2; i<=9; i++) {
+			System.out.println(i + "단");
 		
-		for (row = 1; row < 10; row++) {
-			for (col = 0; col <= row; col++) {
-				System.out.print(str[col]);
+			for(int j=1; j<=9; j++) {
+				int z = i*j;
+				System.out.println(i + "x" + j +" = "+ z);
 			}
-			System.out.print("\n");
+			
 		}
-
+		
 	}
 
 }

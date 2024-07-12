@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Test04 {
 
 	public static void main(String[] args) {
-		char str[] = {4, 2, 1, 5, 3};
+		int arr[] = {4, 2, 1, 5, 3};
 		for(int i = 0; i<4; i++) {
 			for (int j = i+1; j<5; j++) {
 				if(arr[i]> arr[j]) {
@@ -19,15 +19,10 @@ public class Test04 {
 				}
 			}
 		}
-		
-		for (row = 1; row < 10; row++) {
-			for (col = 0; col <= row; col++) {
-				System.out.print(str[col]);
-			}
-			System.out.print("\n");
-			//System.out.print(Arrays.toString(arr)); -> 배열문 통째로 출력
+	
+		for(int n : arr) {
+			System.out.print(n + " ");
 		}
-
 	}/*정답 : 1라운드 : 1 4 2 5 3
 	2라운드 : 1 2 4 5 3
 	3라운드 : 1 2 3 5 4

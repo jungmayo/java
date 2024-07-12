@@ -1,22 +1,41 @@
 package test2;
 
+import java.util.Scanner;
+
 /* 날짜 : 2024.07.05
  * 이름 : 정지현
- * 내용 : 자바 배열 문자 출력 연습문제 length - 10 / 인덱스 9
+ * 내용 : 자바 메서드 연습문제
  */
 public class Test06 {
 
+	public static void intro() {
+		System.out.println("*******START********");
+		System.out.println("두 개의 정수를 입력");
+	}
+	public static int input(Scanner sc, String name) {
+		System.out.print("변수 " +name+ "값 입력 : ");
+		int input = sc.nextInt();
+		return input;
+	}
+	public static void result(int val) {
+		System.out.println("덧셈 결과 :" + val);
+		System.out.println("*******END**********");
+	}
+	public static int add(int x, int y) {
+		return x + y;
+	}
 	public static void main(String[] args) {
-		char str[] = {'I',' ','L','O','V','E',' ','Y','O','U'};
-		int row, col;
+		Scanner sc = new Scanner(System.in);
 		
-		for (row = 1; row < 10; row++) {
-			for (col = 0; col <= row; col++) {
-				System.out.print(str[col]);
-			}
-			System.out.print("\n");
-		}
-
+		intro();
+		
+		int a = input(sc, "a");
+		int b = input(sc, "b");
+		
+		int output = add(a, b);
+		result(output);
+		
+		sc.close();
 	}
 
 }

@@ -31,7 +31,7 @@ public class Test04 {
 
 	public static void main(String[] args) {
 		
-		Student.studentID = 20201000;
+		Student.studentID = 20201000; //클래스에서 직접 참조 
 		
 		Student kim = new Student("김유신","국문과",1);
 		kim.studentInfo();

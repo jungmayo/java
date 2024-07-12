@@ -7,16 +7,16 @@ package test2;
 public class Test08 {
 
 	public static void main(String[] args) {
-		char str[] = {'I',' ','L','O','V','E',' ','Y','O','U'};
-		int row, col;
+		System.out.println("3! = " + factorial(3));
+		System.out.println("4! = " + factorial(4));
+		System.out.println("5! = " + factorial(5));
+	}
+	public static int factorial(int n) {
 		
-		for (row = 1; row < 10; row++) {
-			for (col = 0; col <= row; col++) {
-				System.out.print(str[col]);
-			}
-			System.out.print("\n");
+		if (n <= 1) {
+			return 1;
 		}
-
+		return n * factorial(n-1);
 	}
 
 }

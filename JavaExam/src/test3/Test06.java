@@ -16,7 +16,8 @@ class Adder {
 	
 	private Adder(int value) {
 		y += value;
-	}
+	}//생성자 막아놓음
+	
 	private int x;
 	private int y;
 	
@@ -28,7 +29,7 @@ class Adder {
 		this.x += arr[0];
 		this.y += arr[1];
 	}
-	public static void add(Adder a2) {
+	public static void add(Adder a2) { //정적 메서드 .은 참조변수 
 		a2.x += 10;
 	}
 	public static Adder add(Adder a3, int value) {
