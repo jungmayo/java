@@ -5,7 +5,7 @@ public class ExceptionHandlingExample2 {
 	public static void main(String[] args) {
 		String [] array = {"100","1oo"};
 		
-		for(int i=0; i<array.length; i++) {
+		for(int i=0; i<3; i++) {
 			try {
 				int value = Integer.parseInt(array[i]);
 				System.out.println("array: [" + i + "] : " + value);
