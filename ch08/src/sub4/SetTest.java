@@ -22,7 +22,7 @@ public class SetTest {
 		set.add(5);
 		set.add(1);
 		set.add(2);
-		set.add(3);
+		set.add(3); // 중복적으로 추가하는 호출은 무시됨 + 요소의 순서를 보장하지 않음
 		System.out.println(set);
 		
 		// 반복자를 이용한 데이터 출력

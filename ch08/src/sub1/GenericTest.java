@@ -14,7 +14,8 @@ public class GenericTest {
 
 		Apple apple = new Apple("한국", 3000);
 		Banana banana = new Banana("일본" , 3000);
-		// Apple fruitbox = new FruitBox(); 할 필요없이
+		// Apple fruitbox = new FruitBox(); 사용을 하지않기 위해 -> 코드 타입의 안정성을 높이고 명확하게 타입 지정 가능
+		// Banana fruitbox = new FruitBox();
 		
 		// 제네릭 클래스 생성할 때 치환변수 타입 선언
 		FruitBox<Apple> box1 = new FruitBox<>(); //new 뒤에는 <>생략가능

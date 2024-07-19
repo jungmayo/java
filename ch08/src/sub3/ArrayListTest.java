@@ -72,7 +72,7 @@ public class ArrayListTest {
 		System.out.println(people);
 		
 		//김유신 - 김춘추 사이에 '선덕여왕' 삽입
-		people.add(people.indexOf("김춘추"),"선덕여왕");
+		people.add(people.indexOf("고양이"),"강아지"); //고양이 자리의 인덱스 번호에 강아지를 add
 		
 		//'장보고' 제거 후 '왕건' 삽입
 		people.remove(people.indexOf("장보고"));
@@ -85,7 +85,7 @@ public class ArrayListTest {
 		people.set(5, "정도전");
 		
 		
-		// 객체 리스트
+		// 객체 리스트 // Apple 객체를 저장할 arraylist 생성
 		List<Apple> apples = new ArrayList<>();
 		
 		Apple a1 = new Apple("한국", 3000);

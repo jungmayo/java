@@ -16,7 +16,7 @@ public class MapTest {
 	public static void main(String[] args) {
 		
 		// Map 생성하기
-		HashMap<Character, String> map = new HashMap<>(); // 앞은 키타입 뒤는 값타입
+		HashMap<Character, String> map = new HashMap<>(); // 표처럼 앞은 키타입객체 뒤는 값타입객체
 		
 		// 데이터 입력
 		map.put('A', "Apple");
@@ -34,17 +34,18 @@ public class MapTest {
 		System.out.println("map C값 :" + map.get('C'));
 		
 		//map 반복문
-		for(char k : map.keySet()) { // map의 key를 set(집합)으로 반복
+		for(char k : map.keySet()) { // map의 key를 set(집합)으로 반복(중복없이 저장)
 			System.out.println(k + " : " + map.get(k)); // k에 해당하는 값을 반환
 			
 		}
 		
 		// ArrayList와 응용
 		
-		Map<Integer, Apple> map1 = new HashMap<>();
+		Map<Integer, Apple> map1 = new HashMap<>(); //각 키는 유일해야 함 이를 통해 값 조회 가능
 		map1.put(101, new Apple("한국",3000));
 		map1.put(102, new Apple("중국",2000));
 		map1.put(103, new Apple("일본",1000));
+		
 		
 		Map<Integer, Apple> map2 = new HashMap<>();
 		map2.put(201, new Apple("미국",3000));
@@ -56,6 +57,8 @@ public class MapTest {
 		map3.put(302, new Apple("태국",2000));
 		map3.put(303, new Apple("인도",1000));
 		
+		Apple korea = map1.get(101);
+
 		List<Map<Integer, Apple>> appleMaps = new ArrayList<>();
 		
 		appleMaps.add(map1);
@@ -74,5 +77,8 @@ public class MapTest {
 		
 		// 태국 사과 show()
 		appleMaps.get(2).get(302).show();
+		
+		
+
 }
 }
