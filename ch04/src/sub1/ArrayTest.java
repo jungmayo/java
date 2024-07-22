@@ -56,9 +56,9 @@ public class ArrayTest {
 		}
 			System.out.println("scores 배열의 총합 : " + total);
 		// 2차원 배열 - 행열
-		int[][] arr2d = {{1, 2, 3, 4},
-						 {5, 6, 7, 8},
-						 {9, 10, 11, 12}};	
+		int[][] arr2d = {{1, 2, 3, 4},    // 00 01 02 03
+						 {5, 6, 7, 8},		//10 11 12 13
+						 {9, 10, 11, 12}}; // 20 21 22 23	
 		for(int a=0 ; a<3 ; a++) {
 			
 			for(int b=0 ; b<4 ; b++) {

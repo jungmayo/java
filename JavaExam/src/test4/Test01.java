@@ -26,12 +26,17 @@ public class Test01 {
 			Scanner sc = new Scanner(System.in);
 			input = sc.nextInt();
 			
-
+			if(input < 0) {
+				 throw new Exception("음수는 입력 할 수 없습니다.");
+				}
 					
 			}catch(InputMismatchException e) {
 				System.out.println("숫자가 아닙니다. 숫자를 입력하세요.");
 					continue;
-
+			
+			}catch (Exception e) {
+				System.out.println(e.getMessage());
+					continue;
 			}
 			
 			if(answer > input) {

@@ -8,7 +8,6 @@ import java.util.TreeSet;
  * 날짜 : 2024.07.19
  * 이름 : 정지현
  * 내용 : 로또번호 연습문제
- * 
  */
 public class Test07 {
 
@@ -36,5 +35,6 @@ public class Test07 {
 		Set<Integer> treeSet = new TreeSet<Integer>(lottoset);
 		
 		return treeSet;
+	
 	}
 }

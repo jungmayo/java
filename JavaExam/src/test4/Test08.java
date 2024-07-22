@@ -44,6 +44,7 @@ public class Test08 {
 		for(Member m : memberList) {
 			System.out.println(m);
 		}
-	}
 
+	}
 }
+
