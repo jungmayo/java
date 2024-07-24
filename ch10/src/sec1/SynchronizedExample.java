@@ -6,7 +6,7 @@ class Calculator{
 	public int getMemory() {
 		return memory;
 	}
-	public synchronized void setMemory1(int memory) {
+	public synchronized void setMemory1(int memory) { //단 하나의 스레드만 실행하는 영역
 		this.memory = memory;
 		try {
 			Thread.sleep(2000);
@@ -14,8 +14,8 @@ class Calculator{
 		System.out.println(Thread.currentThread().getName() + ":" + this.memory);
 	}
 
-	public void setMemory2(int memory) {
-		synchronized (this) {
+	public void setMemory2(int memory) { 
+		synchronized (this) { //this = 공유객체 (객체잠금) // 단하나의 스레드만 실행하는 영역
 			this.memory = memory;
 			try {
 				Thread.sleep(2000);
@@ -31,7 +31,7 @@ class User1Thread extends Thread{
 	public User1Thread() {
 		setName("User1Thread");
 	}
-	public void setCalculator(Calculator calculator) {
+	public void setCalculator(Calculator calculator) { 
 		this.calculator = calculator;
 	}
 	@Override
