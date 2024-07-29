@@ -27,7 +27,7 @@ public class BankApp {
 				deposit();
 				
 			}else if(selectNo == 4) {
-				//withdraw();
+				withdraw();
 			}else if(selectNo == 5) {
 				run = false;
 			}
@@ -56,28 +56,33 @@ public class BankApp {
 	/*3. deposit 메소드*/
 	private static void deposit() {
 		System.out.print("계좌번호 : ");
-		findAccount(scanner.nextLine());
-		
+		Account a = findAccount(scanner.nextLine());
+		int b = (Integer.parseInt(scanner.nextLine()));
+		int c = a.getBalance();
+		a.setBalance(b+c);
+		System.out.println("입금완료");
 	}
 	
 	/*4. withdraw 메소드*/
 	private static void withdraw() {
-		
+		System.out.println("계좌번호 : ");
+		Account a = findAccount(scanner.nextLine());
+		int b = Integer.parseInt(scanner.nextLine());
+		int c = a.getBalance();
+		a.setBalance(c-b);
 		
 		
 	}
 	
 	/*5. findAccoun 메소드*/
 	private static Account findAccount(String ano) {
-		Account a = null;
+		
 		for(Account as : accounts) {
-			if(as.equals(as.getAno())){
-				a = as;
+			if(as.getAno().equals(ano)){
+				return as;
 			}			
 		}
-		return a;
-	
-	
+		return null;
 	}
 }
 	
