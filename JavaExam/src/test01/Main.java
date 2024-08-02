@@ -6,6 +6,7 @@ package test01;
 * 내용 : 자바 총정리 문제
 */
 
+
 class StudentScore {
 	private String studentName;
 	private String studentId;

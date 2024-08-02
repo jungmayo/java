@@ -19,15 +19,14 @@ class Book {
 		this.isBorrowd = false; // 대출되지않은
 	}
 	public void borrowBook() {
-		if(isBorrowd == false) {
+		if(!isBorrowd) {
 			this.isBorrowd = true;
-			System.out.println("도서 대출 " + this.title);
-			
+			System.out.println("도서 대출 : " + this.title);
 		}else
-			System.out.println("이미 대출 됨");
+			System.out.println(this.title + " 이미 대출 됨");
 	}
 	public void returnBook() {
-		if(isBorrowd == true) {
+		if(isBorrowd) {
 			this.isBorrowd = false;
 			System.out.println("도서 반납 " + this.title);
 		}
@@ -42,12 +41,23 @@ class Book {
 		String borrow = isBorrowd ? "불가능" : "가능";
 		System.out.println("대출 여부	: " + borrow);
 	}
-
-
+	public String getTitle() {
+		return title;
+	}
 	
 	
 	
+	
+	
+	public boolean isBorrowed() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
+
+
+
+
 
 class Member {
 	private String name;
@@ -61,22 +71,29 @@ class Member {
 	}
 	
 	public void borrowBook(Book book) {
-		book.borrowBook();
-		this.borrowedBook = book;
-		System.out.println("도서대출 : " + this.borrowedBook);
-		
-		
+	
+			if(!book.isBorrowed())borrowedBook = book; 
+				book.borrowBook();
+			
 	}
+			
 	public void returnBook(Book book) {
+		if(this.borrowedBook != null) {
 		book.returnBook();
-		this.borrowedBook = book;
-		System.out.println("도서반납 : " + this.borrowedBook);
+		this.borrowedBook = null;
+		}else {
+			System.out.println("대출한 도서가 아님");
+		}
 	}
+	
 	public void getMemberInfo() {
 		System.out.println("회원 이름 : " + name);
 		System.out.println("회원 ID : " + memberId);
-		System.out.println("대출한 도서 : " + this.borrowedBook);
-		
+		if(borrowedBook ==null) {
+			System.out.println("대출한 도서 : 없음");
+		}else {
+		System.out.println("대출한 도서 : " + borrowedBook.getTitle());
+		}
 	}
 
 	
