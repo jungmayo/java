@@ -99,6 +99,10 @@ public class CalcApp extends JFrame {
 		JButton btndiv = new JButton("/");
 		btndiv.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String currentText = txtResult.getText();
+				num.add(Integer.parseInt(currentText));
+				cal.add("/");
+				txtResult.setText("");
 			}
 		});
 		btndiv.setBounds(175, 74, 49, 41);
@@ -146,6 +150,10 @@ public class CalcApp extends JFrame {
 		JButton btnmulti = new JButton("x");
 		btnmulti.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String currentText = txtResult.getText();
+				num.add(Integer.parseInt(currentText));
+				cal.add("x");
+				txtResult.setText("");
 			}
 		});
 		btnmulti.setBounds(175, 125, 49, 41);
@@ -200,6 +208,11 @@ public class CalcApp extends JFrame {
 		JButton btnMin = new JButton("-");
 		btnMin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String currentText = txtResult.getText();
+				
+				num.add(Integer.parseInt(currentText));
+				cal.add("-");
+				txtResult.setText("");
 			}
 		});
 		btnMin.setBounds(175, 176, 49, 41);
@@ -208,7 +221,11 @@ public class CalcApp extends JFrame {
 		JButton btnReset = new JButton("C");
 		btnReset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtResult.setText("0");
+				txtResult.setText("");
+				total = 0;
+				num.clear();
+				cal.clear();
+				
 			
 				
 			 
@@ -221,7 +238,7 @@ public class CalcApp extends JFrame {
 		btn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String currentText = txtResult.getText();
-				txtResult.setText(currentText+0);
+				txtResult.setText("");
 			}
 		});
 		btn0.setBounds(67, 223, 49, 41);
